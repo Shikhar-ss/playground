@@ -55,13 +55,17 @@ function App() {
           <Route path="/prefrences">
             <Prefrences />
           </Route>
-          <Route exact path="/whale">
+          <Route path="/whale">
+            {/* Nested Routing */}
             <Whale/>
           </Route>
-          <Route path="/whale/:name">
-            {/* using URL params */}
+          {/* <Route exact path="/whale">
             <Whale/>
-          </Route>
+          </Route> */}
+          {/* <Route path="/whale/:name">
+            using URL params
+            <Whale/>
+          </Route> */}
           {/* <Route path="/whale">
             using search parameters
             <Whale />
