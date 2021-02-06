@@ -1,10 +1,14 @@
 .App {
   text-align: center;
   color:red;
-  padding: 10em;
+  padding: 5em;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.navbar{
+  display: flex;
+  flex-direction: row;
+}

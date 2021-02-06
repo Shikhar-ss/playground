@@ -1,10 +1,18 @@
+import React , {useState} from "react";
 import './App.css';
 import Dashboard from "./components/Dashboard/Dashboard";
 import Prefrences from "./components/Prefrences/Prefrences";
 import Whale from "./components/Whale/Whale";
 import Manatee from "./components/Manatee/Manatee";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom"
+import Login from "./components/Login/Login";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+
 function App() {
+
+  const [token,setToken] = useState();
+  if(!token){
+    return <Login setToken={setToken}/>
+  }
   return (
     <div className="App">
       <h1>
@@ -12,7 +20,7 @@ function App() {
       </h1>
       
       <BrowserRouter>
-      <nav>
+      <nav className="navbar">
         <h2>
           NAVBAR
         </h2>
@@ -59,6 +67,7 @@ function App() {
             {/* Nested Routing */}
             <Whale/>
           </Route>
+          
           {/* <Route exact path="/whale">
             <Whale/>
           </Route> */}
