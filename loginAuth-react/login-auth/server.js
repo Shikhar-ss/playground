@@ -5,8 +5,9 @@ const cors = require('cors');
 app.use(cors());
 
 app.use('/login',(req,res)=>{
+    console.log("REQUEST",req.body)
     res.send({
-        token:'test123'
+        token:'test1234'
     });
 });
 

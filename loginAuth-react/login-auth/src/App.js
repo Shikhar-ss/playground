@@ -10,6 +10,7 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 function App() {
 
   const [token,setToken] = useState();
+  console.log("TOKEN_: ",token)
   if(!token){
     return <Login setToken={setToken}/>
   }
